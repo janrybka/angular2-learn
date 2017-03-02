@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IProduct } from './iproduct';
 
 @Component({
-    selector: 'pm-products',
+    //selector: 'pm-products',
     moduleId: module.id,
     templateUrl: './product-list.component.html',
     styleUrls: [ './product-list.component.css' ]
@@ -46,6 +46,11 @@ export class ProductListComponent
             "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
         }
     ];
+    selectedProduct: IProduct;
+
+    onSelectProduct(): void {
+        
+    }
 
     toggleImage(): void {
         this.showImage = !this.showImage;
