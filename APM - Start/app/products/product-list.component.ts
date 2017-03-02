@@ -33,7 +33,10 @@ export class ProductListComponent
     ngOnInit(): void {
         this._productService.getProducts()
             .subscribe(
-                products => this.products = products,
+                products => {
+                    this.products = products;
+                    this.selectedProduct = products[1];
+                },
                 error => this.errorMessage  = <any>error
             );
     }

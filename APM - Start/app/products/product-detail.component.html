@@ -1,9 +1,9 @@
 <div class='panel panel-primary'>
     <div class='panel-heading'>
-        {{productInfo.productName}} ({{productInfo.productCode}})
+        {{productInfo?.productName}} ({{productInfo?.productCode}})
     </div>
     <div>
-        Description: <input type='test' [value]='productInfo.description' /><br/>
-        Price: <input type='test' [(ngModel)]='productInfo.price' />
+        Description: <input type='test' [value]='productInfo?.description' /><br/>
+        Price: <input type='test' [ngModel]="productInfo?.price" (ngModelChange)="productInfo.price = $event" />
     </div>
 </div>
