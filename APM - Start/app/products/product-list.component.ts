@@ -3,7 +3,7 @@ import { IProduct } from './iproduct';
 import { ProductService } from './product.service'
 
 @Component({
-    selector: 'pm-products',
+    //selector: 'pm-products',
     moduleId: module.id,
     templateUrl: './product-list.component.html',
     styleUrls: [ './product-list.component.css' ]
@@ -17,9 +17,13 @@ export class ProductListComponent
     listFilter: string;
     products: IProduct[];
     errorMessage: string;
+    selectedProduct: IProduct;
 
     constructor(private _productService: ProductService) { 
+    }
 
+    onSelectProduct(): void {
+        
     }
 
     toggleImage(): void {
