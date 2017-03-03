@@ -23,8 +23,7 @@ export class ProductListComponent
     }
     
     onSelectProduct(event: any, id: number): void {
-        //this.products.find()
-        console.log('jest');
+        this.selectedProduct = this.products.find(prod => prod.productId == id);
     }
 
     toggleImage(): void {
