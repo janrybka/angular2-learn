@@ -48,8 +48,9 @@ export class ProductListComponent
     ];
     selectedProduct: IProduct;
 
-    onSelectProduct(): void {
-        
+    onSelectProduct(event: any, id: number): void {
+        //this.products.find()
+        console.log('jest');
     }
 
     toggleImage(): void {

@@ -33,6 +33,7 @@
                 </thead>
                 <tbody>
                     <tr *ngFor='let product of products | productFilter:listFilter'>
+                        <td><button (click)='onSelectProduct($event, product.productId)'>Details</button></td>
                         <td>
                             <img *ngIf='showImage' [src]='product.imageUrl' [title]='product.productName' [style.width.px]='imageWidth' [style.margin.px]='imageMargin'
                                 />
