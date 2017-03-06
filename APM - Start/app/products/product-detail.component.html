@@ -2,13 +2,13 @@
     <div class='panel-heading'>
         {{pageTitle}} {{productInfo?.productName}} ({{productInfo?.productCode}})
     </div>
-    <div>
+    <div class='panel-body'>
         Description: <input type='test' [value]='productInfo?.description' /><br/>
         Price: <input type='test' [ngModel]="productInfo?.price" (ngModelChange)="productInfo.price = $event" />
     </div>
     <div class='panel-footer'>
         <a class="btn btn-default" (click)='onBack()' style='width: 80px'>
-            <i class="glyphicon glyphicon-chevron-left">onBack</i>
+            <i class="glyphicon glyphicon-chevron-left"></i>onBack
         </a>
     </div>
 </div>
